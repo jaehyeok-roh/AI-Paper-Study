@@ -7,13 +7,13 @@
 ## 2. 기존 CNN과의 차이점
 기존에는 이미지의 특징을 추출하기 위해 합성곱(Convolution) 연산을 주로 사용함.
 
-하지만 ViT는 이미지를 (이곳에 재혁님이 아는 내용을 적어보세요!) 처리함.
+하지만 ViT는 이미지를 패치로 나누어 하나의 패치를 트랜스포머의 한 단어처럼 처리함.
 
 ## 3. 핵심 구조 (Architecture)
 Patch Extraction: 이미지를 16x16 크기의 패치(Patch)로 분할.
 
 Linear Projection: 쪼개진 패치들을 1차원 벡터로 변환.
 
-Positional Embedding: (이곳에 위치 정보가 왜 필요한지 적어보세요!)
+Positional Embedding: 각 패치가 어디있는지에 대한 정보를 주기위해 수행.
 
 Transformer Encoder: Self-Attention 연산을 통해 패치들 간의 연관성을 학습.
